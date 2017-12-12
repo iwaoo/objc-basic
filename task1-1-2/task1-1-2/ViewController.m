@@ -18,16 +18,15 @@
     [super viewDidLoad];
     // NSArray型
     NSArray *fruits = @[@"りんご", @"なし",@"みかん"];
-    for(id s in fruits)
+    for(String *s in fruits)
     {
-        NSLog(@"%@",(NSString*)s);
+        NSLog(@"%@",s);
     }
     // NSDictionary型
     NSDictionary *pc = @{@"mac":@"マック", @"windows":@"ウインドウズ"};
-    for (id key in [pc keyEnumerator]) {
-        NSLog(@"%@", [pc valueForKey:key]);
+    for (NSString* key in pc.allValues) {
+        NSLog(@"%@",key );
     }
-
 }
 
 
