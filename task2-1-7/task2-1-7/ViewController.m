@@ -31,7 +31,7 @@
     // 入力済みのテキストと入力が行われたテキストを結合
     [str replaceCharactersInRange:range withString:string];
     
-    if ([str length] > maxInputLength) {
+    if (str.length > maxInputLength) {
         return NO;
     }
     
