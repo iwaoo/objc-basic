@@ -2,7 +2,7 @@
 //  ViewController.m
 //  task2-1-1
 //
-//  Created by 新井岩生 on 2017/12/08.
+//  Created by 新井岩生 on 2017/12/13.
 //  Copyright © 2017年 新井岩生. All rights reserved.
 //
 
@@ -16,7 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.lable.text = NSLocalizedString(@"start_objc", comment: "");
+    // Do any additional setup after loading the view, typically from a nib.
+    self.label.text = NSLocalizedString(@"welcome", comment: "");
 }
 
 
