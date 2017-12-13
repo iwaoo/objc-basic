@@ -15,6 +15,10 @@
 @property NSString *sex;
 @property NSString *good_point;
 
-- (NSString *) introduceMethod;
+@property NSString *myVar;
+
+// イニシャライザ
+- (id) init;
+- (id)initWithName:(NSString *)nameValue initWithAge:(int)ageValue initWithSex:(NSString *)sexValue initWithGoodPoint:(NSString *)goodPointValue;
 
 @end

@@ -10,9 +10,20 @@
 
 @implementation Account
 
-- (NSString *) introduceMethod{
-    NSString *result=[NSString stringWithFormat:@"%@%@%@%d%@", self.name, self.good_point, @"が得意な", self.age, @"歳です。"];
-    return result;
+- (id) init {
+    return nil;
+}
+
+// 引数ありのイニシャライザの実装
+- (id)initWithName:(NSString *)nameValue initWithAge:(int)ageValue initWithSex:(NSString *)sexValue initWithGoodPoint:(NSString *)goodPointValue {
+    self = [super init];
+    if (self != nil) {
+        self.name = nameValue;
+        self.age = ageValue;
+        self.sex = sexValue;
+        self.good_point = goodPointValue;
+    }
+    return self;
 }
 
 @end

@@ -19,39 +19,25 @@
     [super viewDidLoad];
     
     // Account のインスタンスを定義
-    Account *account = [[Account alloc] init];
-    
-    // メンバー一覧
-    NSArray *num1 = @[@"山田君は", @"２５",@"男性", @"objective-c"];
-    NSArray *num2 = @[@"岩田君は", @"２6",@"男性", @"objective-c"];
-    NSArray *num3 = @[@"藤田さんは", @"２2",@"女性", @"javascript"];
-    
-    NSArray *num = @[num1,num2,num3];
-    for(id s in num)
-    {
-        NSString *s_name = [NSString stringWithFormat:@"%@", s[0]];
-        account.name = s_name;
-        
-        NSString *s_age = [NSString stringWithFormat:@"%@", s[1]];
-        int i_age = [s_age intValue];
-        account.age = i_age;
-        
-        NSString *s_sex = [NSString stringWithFormat:@"%@", s[2]];
-        account.sex = s_sex;
-        
-        NSString *s_good_point = [NSString stringWithFormat:@"%@", s[3]];
-        account.good_point = s_good_point;
-        
-        NSString *str = [account introduceMethod];
-        NSLog(@"%@", str);
+    Account *account1 = [[Account alloc] initWithName:@"山田" initWithAge:(int)25 initWithSex:@"女性" initWithGoodPoint:@"objective-c"];
+    Account *account2 = [[Account alloc] initWithName:@"岩田" initWithAge:(int)26 initWithSex:@"男性" initWithGoodPoint:@"objective-c"];
+    Account *account3 = [[Account alloc] initWithName:@"藤田" initWithAge:(int)22 initWithSex:@"女性" initWithGoodPoint:@"javascript"];
+    NSString *man = @"男性";
+    if (account1.sex == man) {
+        NSLog(@"%@%@%@%@%d%@", account1.name, @"君は", account1.good_point, @"が得意な", account1.age, @"歳です。");
+    } else {
+        NSLog(@"%@%@%@%@%d%@", account1.name, @"さんは", account1.good_point, @"が得意な", account1.age, @"歳です。");
+    }
+    if (account2.sex == man) {
+        NSLog(@"%@%@%@%@%d%@", account2.name, @"君は", account2.good_point, @"が得意な", account2.age, @"歳です。");
+    } else {
+        NSLog(@"%@%@%@%@%d%@", account2.name, @"さんは", account2.good_point, @"が得意な", account2.age, @"歳です。");
+    }
+    if (account3.sex == man) {
+        NSLog(@"%@%@%@%@%d%@", account3.name, @"君は", account3.good_point, @"が得意な", account3.age, @"歳です。");
+    } else {
+        NSLog(@"%@%@%@%@%d%@", account3.name, @"さんは", account3.good_point, @"が得意な", account3.age, @"歳です。");
     }
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
