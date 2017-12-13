@@ -10,12 +10,6 @@
 
 @interface Account : NSObject
 
-@property NSString *name;
-@property int age;
-@property NSString *sex;
-@property NSString *good_point;
-
-- (NSString *) introduceMethod;
 - (void) callData;
 
 @end

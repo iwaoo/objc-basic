@@ -15,11 +15,6 @@
 
 @implementation Account
 
-- (NSString *) introduceMethod{
-    NSString *result=[NSString stringWithFormat:@"%@%@%@%d%@", self.name, self.good_point, @"が得意な", self.age, @"歳です。"];
-    return result;
-}
-
 // インターンに参加メドッド
 - (void) callData{
     FavoriteProgrammingLanguage *favoriteProgrammingLanguage = [FavoriteProgrammingLanguage new];
