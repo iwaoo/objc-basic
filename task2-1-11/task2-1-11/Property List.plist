@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Wrap</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Group1</string>
+			<key>Row</key>
+			<array>
+				<dict>
+					<key>image</key>
+					<string>image1</string>
+					<key>text</key>
+					<string>春日部市の張子人形店では、来年の干支である「戌」にちなんだ張り子が人気を集めています。</string>
+				</dict>
+				<dict>
+					<key>image</key>
+					<string>image2</string>
+					<key>text</key>
+					<string>張り子は、型に和紙を張り重ね乾燥させた後に、絵付けをする人形で、江戸時代から続く伝統工芸品です。春日部市の張子人形店「玩古庵」では、新年を間もなく迎えるこの時期、来年の干支「戌」の人形が人気を集めています。</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Group2</string>
+			<key>Row</key>
+			<array>
+				<dict>
+					<key>image</key>
+					<string>image3</string>
+					<key>text</key>
+					<string>「犬張子」は、安産祈願や子どもの成長を願う意味があり、地方によっては、子どもが生まれた時に贈る風習があるなど縁起物とされています。ザルをかぶった人形は、「笑いが絶えないように」との願いも込められています。また、犬の上にでんでん太鼓が乗る「でんでん犬張子」は、「裏表が無いように」「角が無いように」との意味があるということです。</string>
+				</dict>
+				<dict>
+					<key>image</key>
+					<string>image4</string>
+					<key>text</key>
+					<string>玩古庵の五十嵐俊介さんは「手作りなので、完成品が1つ1つ違います。かわいいものや、好みの絵付けを選んで頂き、末永く飾っていただければと思います」と話していました。</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

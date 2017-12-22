@@ -1,18 +1,18 @@
 //
-//  TestTests.m
-//  TestTests
+//  task2_1_11Tests.m
+//  task2-1-11Tests
 //
-//  Created by 新井岩生 on 2017/12/14.
+//  Created by 新井岩生 on 2017/12/22.
 //  Copyright © 2017年 新井岩生. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface TestTests : XCTestCase
+@interface task2_1_11Tests : XCTestCase
 
 @end
 
-@implementation TestTests
+@implementation task2_1_11Tests
 
 - (void)setUp {
     [super setUp];
