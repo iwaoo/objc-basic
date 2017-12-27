@@ -40,7 +40,7 @@
         NSString *filedPath = [[paths firstObject] stringByAppendingPathComponent:@"test.db"];
         FMDatabase *fm = [[FMDatabase alloc] initWithPath:filedPath];
         [fm open];
-        [fm executeUpdate:sql, _titleTextField.text, _contentTextField.text, date,date,limitDate ,[NSNumber numberWithBool:NO]];
+        [fm executeUpdate:sql, self.titleTextField.text, self.contentTextField.text, date,date,limitDate ,[NSNumber numberWithBool:NO]];
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
         [formatter setDateFormat:@"yyyy-MM-dd"];
         [fm close];

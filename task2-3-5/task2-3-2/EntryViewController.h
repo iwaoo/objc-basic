@@ -13,5 +13,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *contentTextField;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
-- (IBAction)submitAction:(id)sender;
+
 @end

@@ -22,27 +22,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    if (![ud objectForKey:@"firstRunDate2"]) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *filedPath = [[paths firstObject] stringByAppendingPathComponent:@"test.db"];
-        FMDatabase *fm = [[FMDatabase alloc] initWithPath:filedPath];
-        [fm open];
-        [fm executeUpdate:@"CREATE TABLE IF NOT EXISTS tr_todo (todo_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT, todo_contents TEXT,created DATETIME,modified DATETIME,limit_date DATETIME,delete_flg BOOL);"];
-    }
-    // 初回起動日時を設定
-    [ud setObject:[NSDate date] forKey:@"firstRunDate2"];
-    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filedPath = [[paths firstObject] stringByAppendingPathComponent:@"test.db"];
+    FMDatabase *fm = [[FMDatabase alloc] initWithPath:filedPath];
+    [fm open];
+    [fm executeUpdate:@"CREATE TABLE IF NOT EXISTS tr_todo (todo_id INTEGER PRIMARY KEY AUTOINCREMENT, todo_title TEXT, todo_contents TEXT,created DATETIME,modified DATETIME,limit_date DATETIME,delete_flg BOOL);"];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
     [self makeTodoModelData];
-    [_tableView reloadData];
+    [self.tableView reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataList.count;
+    return self.dataList.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellId = @"cell";
@@ -51,14 +45,14 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd"];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",_dataList[indexPath.row].todo_title];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",self.dataList[indexPath.row].todo_title];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@",[formatter stringFromDate:_dataList[indexPath.row].limit_date]];
     
     return cell;
 }
 
 -(void)makeTodoModelData{
-    _dataList = [[NSMutableArray alloc]init];
+    self.dataList = [[NSMutableArray alloc]init];
     
     NSString *sql = @"SELECT todo_id,todo_title,limit_date FROM tr_todo WHERE delete_flg = ? ORDER BY limit_date;";
     
@@ -71,7 +65,7 @@
         int todo_id = [results intForColumn:@"todo_id"];
         NSString *todo_title = [results stringForColumn:@"todo_title"];
         NSDate *limit_date = [results dateForColumn:@"limit_date"];
-        [_dataList addObject:[[TodoModel alloc] initWithID:todo_id title:todo_title limitDate:limit_date]];
+        [self.dataList addObject:[[TodoModel alloc] initWithID:todo_id title:todo_title limitDate:limit_date]];
     }
     [fm close];
 }
