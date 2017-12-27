@@ -17,17 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    if (![ud objectForKey:@"firstRunDate"]) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *filedPath = [[paths firstObject] stringByAppendingPathComponent:@"testdb"];
-        FMDatabase *fm = [[FMDatabase alloc] initWithPath:filedPath];
-        [fm open];
-        [fm executeUpdate:@"create table if not exists tr_todo (todo_id, todo_title, todo_contents, created, modified, limit_date, delete_flg);"];
-    }
-    // 初回起動日時を設定
-    [ud setObject:[NSDate date] forKey:@"firstRunDate"];
-    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filedPath = [[paths firstObject] stringByAppendingPathComponent:@"testdb"];
+    FMDatabase *fm = [[FMDatabase alloc] initWithPath:filedPath];
+    [fm open];
+    [fm executeUpdate:@"create table if not exists tr_todo (todo_id, todo_title, todo_contents, created, modified, limit_date, delete_flg);"];
 }
 
 
