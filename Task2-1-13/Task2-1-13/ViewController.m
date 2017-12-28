@@ -10,7 +10,7 @@
 #import "SampleCollectionViewCell.h"
 #import "SampleCollectionReusableView.h"
 
-@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 @property (nonatomic, retain) NSMutableArray *imageNameArray;
 @property (nonatomic, retain) NSArray *titles;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -29,12 +29,18 @@
     [self.collectionView registerNib:headerNibFile forSupplementaryViewOfKind:UICollectionElementKindSectionHeader      withReuseIdentifier:@"Title"];
     
     self.titles = @[
-                @"かわいい犬",
-                @"美味しい食べ物",
+                @"Group1",
+                @"Ggroup2",
+                @"Ggroup3",
+                @"Ggroup4",
+                @"Ggroup5",
                 ];
     self.imageNameArray = [NSMutableArray arrayWithArray: @[
-                                                            @[@"image1",@"image2",@"image3",@"image4",],
-                                                            @[@"image5",@"image6",@"image7",@"image8"]
+                                                            @[@"image1",@"image2",],
+                                                            @[@"image3",@"image4",],
+                                                            @[@"image5",@"image6",],
+                                                            @[@"image7",@"image8",],
+                                                            @[@"image9",@"image10",]
                                                           ]];
 }
 
@@ -67,6 +73,14 @@
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     [cell.contentView addSubview:imageView];
     return cell;
+}
+
+// セルの大きさを指定
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CGFloat CellSize = self.collectionView.bounds.size.width/2.5;
+    CGSize size = CGSizeMake(CellSize, CellSize);
+    return size;
 }
 
 @end
