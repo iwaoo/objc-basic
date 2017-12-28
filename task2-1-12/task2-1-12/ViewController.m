@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "SampleCollectionViewCell.h"
 
-@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic, retain) NSMutableArray *imageNameArray;
@@ -27,7 +27,7 @@
 }
 
 - (void)arraySetUp {
-    self.imageNameArray = [NSMutableArray arrayWithArray: @[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6"]];
+    self.imageNameArray = [NSMutableArray arrayWithArray: @[@"image1",@"image2",@"image3",@"image4",@"image5",@"image6",@"image7",@"image8",@"image9"]];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -39,6 +39,15 @@
     SampleCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     cell.cellImageView.image = [UIImage imageNamed:self.imageNameArray[indexPath.row]];
     return cell;
+}
+// cellサイズとグリッド間の間隔を定義
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CGFloat CellSize = 0;
+    CellSize = collectionView.bounds.size.width/4;
+    CGSize size = CGSizeMake(CellSize, CellSize);
+    
+    return size;
 }
 
 @end
