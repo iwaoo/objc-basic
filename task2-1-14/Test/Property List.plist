@@ -2,13 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>image4</key>
-	<string>image4</string>
-	<key>image3</key>
-	<string>In addition to 21st Century Fox&apos;s movie studio and regional sports networks, Disney is buying cable channels FX and National Geographic. Disney will also get Fox&apos;s stakes in Hulu and 3</string>
-	<key>image2</key>
-	<string>image2</string>
-	<key>image1</key>
-	<string>In addition to 21st Century Fox&apos;s movie studio and regional sports networks, Disney is buying cable channels FX and National Geographic. Disney will also get Fox&apos;s stakes in Hulu and 1</string>
+	<key>item4</key>
+	<array>
+		<string>image4</string>
+		<string>インターネットテレビ局「ＡｂｅｍａＴＶ」</string>
+	</array>
+	<key>item3</key>
+	<array>
+		<string>image3</string>
+		<string>インターネットテレビ局「ＡｂｅｍａＴＶ」で大みそかに放送する特別企画「朝青龍を押し出したら１０００万円」にアテネ五輪銀メダリストの柔道家・泉浩（３５）が挑戦者として参戦することが分かった。２２日、番組公式ツイッターで発表された。(スポニチアネックス)</string>
+	</array>
+	<key>item2</key>
+	<array>
+		<string>image2</string>
+		<string>インターネットテレビ局「ＡｂｅｍａＴＶ」で大みそかに放送する特別企画「朝青龍を押し出したら１０００万円」にアテネ五輪銀メダリストの柔道家・泉浩（３５）が挑戦者として参戦することが分かった。２２日、番組公式ツイッターで発表された。(スポニチアネックス)</string>
+	</array>
+	<key>item1</key>
+	<array>
+		<string>image1</string>
+		<string>インターネットテレビ局「ＡｂｅｍａＴＶ」で大みそかに放送する特別企画「朝青龍を押し出したら１０００万円」にアテネ五輪銀メダリストの柔道家・泉浩（３５）が挑戦者として参戦することが分かった。２２日、番組公式ツイッターで発表された。(スポニチアネックス)</string>
+	</array>
 </dict>
 </plist>
