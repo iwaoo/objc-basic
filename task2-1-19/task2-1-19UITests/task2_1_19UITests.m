@@ -1,18 +1,18 @@
 //
-//  TestUITests.m
-//  TestUITests
+//  task2_1_19UITests.m
+//  task2-1-19UITests
 //
-//  Created by 新井岩生 on 2017/12/19.
+//  Created by 新井岩生 on 2017/12/29.
 //  Copyright © 2017年 新井岩生. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface TestUITests : XCTestCase
+@interface task2_1_19UITests : XCTestCase
 
 @end
 
-@implementation TestUITests
+@implementation task2_1_19UITests
 
 - (void)setUp {
     [super setUp];

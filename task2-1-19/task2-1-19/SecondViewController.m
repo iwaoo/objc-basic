@@ -1,14 +1,15 @@
 //
 //  SecondViewController.m
-//  Test
+//  task2-1-19
 //
-//  Created by 新井岩生 on 2017/12/19.
+//  Created by 新井岩生 on 2017/12/29.
 //  Copyright © 2017年 新井岩生. All rights reserved.
 //
 
 #import "SecondViewController.h"
 
 @interface SecondViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *outPutLabel;
 
 @end
 
@@ -16,14 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.outPutLabel.text = self.str;
     self.navigationItem.title = @"Second View";
-    _dataShowLabel.text = self.dataString;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
