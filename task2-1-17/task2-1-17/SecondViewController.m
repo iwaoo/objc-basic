@@ -1,22 +1,25 @@
 //
-//  ModalViewController.m
+//  SecondViewController.m
 //  task2-1-17
 //
-//  Created by 新井岩生 on 2017/12/18.
+//  Created by 新井岩生 on 2017/12/28.
 //  Copyright © 2017年 新井岩生. All rights reserved.
 //
 
-#import "ModalViewController.h"
+#import "SecondViewController.h"
 
-@interface ModalViewController ()
+@interface SecondViewController ()
 
 @end
 
-@implementation ModalViewController
+@implementation SecondViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)goBack:(id)sender {
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +37,4 @@
 }
 */
 
-- (IBAction)dismiss:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 @end
