@@ -41,7 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>位置情報に常に使われます。</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>情報を通知するために使用します。</string>
