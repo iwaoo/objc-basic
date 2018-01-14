@@ -162,7 +162,11 @@ NS_ASSUME_NONNULL_BEGIN
  @return The `FMDatabaseQueue` object. `nil` on error.
  */
 
+<<<<<<< HEAD
 - (instancetype)initWithPath:(NSString * _Nullable)aPath flags:(int)openFlags vfs:(NSString * _Nullable)vfsName NS_DESIGNATED_INITIALIZER;
+=======
+- (instancetype)initWithPath:(NSString * _Nullable)aPath flags:(int)openFlags vfs:(NSString * _Nullable)vfsName;
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Create queue using file URL and specified flags.
  

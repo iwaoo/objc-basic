@@ -61,7 +61,11 @@
     
     if (self != nil) {
         _path               = [aPath copy];
+<<<<<<< HEAD
         _lockQueue          = dispatch_queue_create([NSString stringWithFormat:@"fmdb.%@", self].UTF8String, NULL);
+=======
+        _lockQueue          = dispatch_queue_create([[NSString stringWithFormat:@"fmdb.%@", self] UTF8String], NULL);
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         _databaseInPool     = FMDBReturnRetained([NSMutableArray array]);
         _databaseOutPool    = FMDBReturnRetained([NSMutableArray array]);
         _openFlags          = openFlags;
@@ -142,7 +146,11 @@
     
     
     [self executeLocked:^() {
+<<<<<<< HEAD
         db = self->_databaseInPool.lastObject;
+=======
+        db = [self->_databaseInPool lastObject];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         
         BOOL shouldNotifyDelegate = NO;
         
@@ -153,7 +161,11 @@
         else {
             
             if (self->_maximumNumberOfDatabasesToCreate) {
+<<<<<<< HEAD
                 NSUInteger currentCount = self->_databaseOutPool.count + self->_databaseInPool.count;
+=======
+                NSUInteger currentCount = [self->_databaseOutPool count] + [self->_databaseInPool count];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
                 
                 if (currentCount >= self->_maximumNumberOfDatabasesToCreate) {
                     NSLog(@"Maximum number of databases (%ld) has already been reached!", (long)currentCount);
@@ -201,7 +213,11 @@
     __block NSUInteger count;
     
     [self executeLocked:^() {
+<<<<<<< HEAD
         count = self->_databaseInPool.count;
+=======
+        count = [self->_databaseInPool count];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     }];
     
     return count;
@@ -212,7 +228,11 @@
     __block NSUInteger count;
     
     [self executeLocked:^() {
+<<<<<<< HEAD
         count = self->_databaseOutPool.count;
+=======
+        count = [self->_databaseOutPool count];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     }];
     
     return count;
@@ -222,7 +242,11 @@
     __block NSUInteger count;
     
     [self executeLocked:^() {
+<<<<<<< HEAD
         count = self->_databaseOutPool.count + self->_databaseInPool.count;
+=======
+        count = [self->_databaseOutPool count] + [self->_databaseInPool count];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     }];
     
     return count;

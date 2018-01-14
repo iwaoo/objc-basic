@@ -76,7 +76,11 @@ NS_ASSUME_NONNULL_BEGIN
  @see hasAnotherRow
  */
 
+<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL next;
+=======
+- (BOOL)next;
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Retrieve next row for result set.
  
@@ -100,7 +104,11 @@ NS_ASSUME_NONNULL_BEGIN
  @warning The `hasAnotherRow` method must follow a call to `<next>`. If the previous database interaction was something other than a call to `next`, then this method may return `NO`, whether there is another row of data or not.
  */
 
+<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL hasAnotherRow;
+=======
+- (BOOL)hasAnotherRow;
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 ///---------------------------------------------
 /// @name Retrieving information from result set
@@ -307,7 +315,11 @@ NS_ASSUME_NONNULL_BEGIN
  @return `(const unsigned char *)` value of the result set's column.
  */
 
+<<<<<<< HEAD
 - (const unsigned char * _Nullable)UTF8StringForColumn:(NSString*)columnName NS_RETURNS_INNER_POINTER;
+=======
+- (const unsigned char * _Nullable)UTF8StringForColumn:(NSString*)columnName;
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 - (const unsigned char * _Nullable)UTF8StringForColumnName:(NSString*)columnName __deprecated_msg("Use UTF8StringForColumn instead");
 
@@ -318,7 +330,11 @@ NS_ASSUME_NONNULL_BEGIN
  @return `(const unsigned char *)` value of the result set's column.
  */
 
+<<<<<<< HEAD
 - (const unsigned char * _Nullable)UTF8StringForColumnIndex:(int)columnIdx NS_RETURNS_INNER_POINTER;
+=======
+- (const unsigned char * _Nullable)UTF8StringForColumnIndex:(int)columnIdx;
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Result set object for column.
 

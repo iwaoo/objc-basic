@@ -80,7 +80,11 @@
                        failure:(void (^)(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error))failure
 {
 
+<<<<<<< HEAD
     if (urlRequest.URL == nil) {
+=======
+    if ([urlRequest URL] == nil) {
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         [self cancelImageDownloadTask];
         self.image = placeholderImage;
         return;

@@ -46,7 +46,11 @@
 }
 
 - (NSString *)description {
+<<<<<<< HEAD
     return [NSString stringWithFormat: @"<AFImageDownloaderResponseHandler>UUID: %@", (self.uuid).UUIDString];
+=======
+    return [NSString stringWithFormat: @"<AFImageDownloaderResponseHandler>UUID: %@", [self.uuid UUIDString]];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 }
 
 @end
@@ -157,10 +161,17 @@
         self.mergedTasks = [[NSMutableDictionary alloc] init];
         self.activeRequestCount = 0;
 
+<<<<<<< HEAD
         NSString *name = [NSString stringWithFormat:@"com.alamofire.imagedownloader.synchronizationqueue-%@", [NSUUID UUID].UUIDString];
         self.synchronizationQueue = dispatch_queue_create([name cStringUsingEncoding:NSASCIIStringEncoding], DISPATCH_QUEUE_SERIAL);
 
         name = [NSString stringWithFormat:@"com.alamofire.imagedownloader.responsequeue-%@", [NSUUID UUID].UUIDString];
+=======
+        NSString *name = [NSString stringWithFormat:@"com.alamofire.imagedownloader.synchronizationqueue-%@", [[NSUUID UUID] UUIDString]];
+        self.synchronizationQueue = dispatch_queue_create([name cStringUsingEncoding:NSASCIIStringEncoding], DISPATCH_QUEUE_SERIAL);
+
+        name = [NSString stringWithFormat:@"com.alamofire.imagedownloader.responsequeue-%@", [[NSUUID UUID] UUIDString]];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         self.responseQueue = dispatch_queue_create([name cStringUsingEncoding:NSASCIIStringEncoding], DISPATCH_QUEUE_CONCURRENT);
     }
 
@@ -377,7 +388,11 @@
 
 - (AFImageDownloaderMergedTask *)dequeueMergedTask {
     AFImageDownloaderMergedTask *mergedTask = nil;
+<<<<<<< HEAD
     mergedTask = (self.queuedMergedTasks).firstObject;
+=======
+    mergedTask = [self.queuedMergedTasks firstObject];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     [self.queuedMergedTasks removeObject:mergedTask];
     return mergedTask;
 }

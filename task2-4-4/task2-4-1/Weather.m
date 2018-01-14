@@ -9,7 +9,11 @@
 #import "Weather.h"
 
 @implementation Weather
+<<<<<<< HEAD
 -(instancetype)initWithDate:(NSDate *)date weather:(NSString *)weather icon:(NSString *)icon{
+=======
+-(id)initWithDate:(NSDate *)date weather:(NSString *)weather icon:(NSString *)icon{
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     if (self = [super init]) {
         self.dateLabel = date;
         self.telop = weather;

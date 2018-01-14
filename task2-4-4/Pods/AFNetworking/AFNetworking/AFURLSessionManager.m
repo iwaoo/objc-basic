@@ -150,6 +150,7 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
     self.uploadProgress.totalUnitCount = task.countOfBytesExpectedToSend;
     self.downloadProgress.totalUnitCount = task.countOfBytesExpectedToReceive;
     [self.uploadProgress setCancellable:YES];
+<<<<<<< HEAD
     (self.uploadProgress).cancellationHandler = ^{
         __typeof__(weakTask) strongTask = weakTask;
         [strongTask cancel];
@@ -182,6 +183,40 @@ typedef void (^AFURLSessionTaskCompletionHandler)(NSURLResponse *response, id re
             __typeof__(weakTask) strongTask = weakTask;
             [strongTask resume];
         };
+=======
+    [self.uploadProgress setCancellationHandler:^{
+        __typeof__(weakTask) strongTask = weakTask;
+        [strongTask cancel];
+    }];
+    [self.uploadProgress setPausable:YES];
+    [self.uploadProgress setPausingHandler:^{
+        __typeof__(weakTask) strongTask = weakTask;
+        [strongTask suspend];
+    }];
+    if ([self.uploadProgress respondsToSelector:@selector(setResumingHandler:)]) {
+        [self.uploadProgress setResumingHandler:^{
+            __typeof__(weakTask) strongTask = weakTask;
+            [strongTask resume];
+        }];
+    }
+
+    [self.downloadProgress setCancellable:YES];
+    [self.downloadProgress setCancellationHandler:^{
+        __typeof__(weakTask) strongTask = weakTask;
+        [strongTask cancel];
+    }];
+    [self.downloadProgress setPausable:YES];
+    [self.downloadProgress setPausingHandler:^{
+        __typeof__(weakTask) strongTask = weakTask;
+        [strongTask suspend];
+    }];
+
+    if ([self.downloadProgress respondsToSelector:@selector(setResumingHandler:)]) {
+        [self.downloadProgress setResumingHandler:^{
+            __typeof__(weakTask) strongTask = weakTask;
+            [strongTask resume];
+        }];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     }
 
     [task addObserver:self
@@ -857,11 +892,19 @@ static NSString * const AFNSURLSessionTaskDidSuspendNotification = @"com.alamofi
 
 #pragma mark -
 - (NSProgress *)uploadProgressForTask:(NSURLSessionTask *)task {
+<<<<<<< HEAD
     return [self delegateForTask:task].uploadProgress;
 }
 
 - (NSProgress *)downloadProgressForTask:(NSURLSessionTask *)task {
     return [self delegateForTask:task].downloadProgress;
+=======
+    return [[self delegateForTask:task] uploadProgress];
+}
+
+- (NSProgress *)downloadProgressForTask:(NSURLSessionTask *)task {
+    return [[self delegateForTask:task] downloadProgress];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 }
 
 #pragma mark -
@@ -1070,7 +1113,11 @@ totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
     if(totalUnitCount == NSURLSessionTransferSizeUnknown) {
         NSString *contentLength = [task.originalRequest valueForHTTPHeaderField:@"Content-Length"];
         if(contentLength) {
+<<<<<<< HEAD
             totalUnitCount = (int64_t) contentLength.longLongValue;
+=======
+            totalUnitCount = (int64_t) [contentLength longLongValue];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         }
     }
 

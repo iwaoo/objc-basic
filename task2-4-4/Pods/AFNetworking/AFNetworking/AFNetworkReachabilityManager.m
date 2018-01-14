@@ -58,7 +58,11 @@ static AFNetworkReachabilityStatus AFNetworkReachabilityStatusForFlags(SCNetwork
     if (isNetworkReachable == NO) {
         status = AFNetworkReachabilityStatusNotReachable;
     }
+<<<<<<< HEAD
 #if    TARGET_OS_IPHONE
+=======
+#if	TARGET_OS_IPHONE
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     else if ((flags & kSCNetworkReachabilityFlagsIsWWAN) != 0) {
         status = AFNetworkReachabilityStatusReachableViaWWAN;
     }
@@ -113,7 +117,11 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 
 @implementation AFNetworkReachabilityManager
 
+<<<<<<< HEAD
 + (AFNetworkReachabilityManager*)sharedManager {
+=======
++ (instancetype)sharedManager {
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     static AFNetworkReachabilityManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -124,7 +132,11 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 }
 
 + (instancetype)managerForDomain:(NSString *)domain {
+<<<<<<< HEAD
     SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, domain.UTF8String);
+=======
+    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [domain UTF8String]);
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
     AFNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
     
@@ -186,7 +198,11 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
 #pragma mark -
 
 - (BOOL)isReachable {
+<<<<<<< HEAD
     return self.reachableViaWWAN || self.reachableViaWiFi;
+=======
+    return [self isReachableViaWWAN] || [self isReachableViaWiFi];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 }
 
 - (BOOL)isReachableViaWWAN {

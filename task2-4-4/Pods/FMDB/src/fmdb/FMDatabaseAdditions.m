@@ -65,7 +65,11 @@ return ret;
 
 - (BOOL)tableExists:(NSString*)tableName {
     
+<<<<<<< HEAD
     tableName = tableName.lowercaseString;
+=======
+    tableName = [tableName lowercaseString];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     
     FMResultSet *rs = [self executeQuery:@"select [sql] from sqlite_master where [type] = 'table' and lower(name) = ?", tableName];
     
@@ -105,14 +109,23 @@ return ret;
     
     BOOL returnBool = NO;
     
+<<<<<<< HEAD
     tableName  = tableName.lowercaseString;
     columnName = columnName.lowercaseString;
+=======
+    tableName  = [tableName lowercaseString];
+    columnName = [columnName lowercaseString];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     
     FMResultSet *rs = [self getTableSchema:tableName];
     
     //check if column is present in table schema
     while ([rs next]) {
+<<<<<<< HEAD
         if ([[rs stringForColumn:@"name"].lowercaseString isEqualToString:columnName]) {
+=======
+        if ([[[rs stringForColumn:@"name"] lowercaseString] isEqualToString:columnName]) {
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
             returnBool = YES;
             break;
         }
@@ -226,13 +239,22 @@ return ret;
     sqlite3_stmt *pStmt = NULL;
     BOOL validationSucceeded = YES;
     
+<<<<<<< HEAD
     int rc = sqlite3_prepare_v2(self.sqliteHandle, sql.UTF8String, -1, &pStmt, 0);
+=======
+    int rc = sqlite3_prepare_v2([self sqliteHandle], [sql UTF8String], -1, &pStmt, 0);
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     if (rc != SQLITE_OK) {
         validationSucceeded = NO;
         if (error) {
             *error = [NSError errorWithDomain:NSCocoaErrorDomain
                                          code:[self lastErrorCode]
+<<<<<<< HEAD
                                      userInfo:@{NSLocalizedDescriptionKey: [self lastErrorMessage]}];
+=======
+                                     userInfo:[NSDictionary dictionaryWithObject:[self lastErrorMessage]
+                                                                          forKey:NSLocalizedDescriptionKey]];
+>>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         }
     }
     
