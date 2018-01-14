@@ -72,11 +72,7 @@
     }
 
     // Ensure terminal slash for baseURL path, so that NSURL +URLWithString:relativeToURL: works as expected
-<<<<<<< HEAD
     if (url.path.length > 0 && ![url.absoluteString hasSuffix:@"/"]) {
-=======
-    if ([[url path] length] > 0 && ![[url absoluteString] hasSuffix:@"/"]) {
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         url = [url URLByAppendingPathComponent:@""];
     }
 
@@ -99,11 +95,7 @@
 - (void)setResponseSerializer:(AFHTTPResponseSerializer <AFURLResponseSerialization> *)responseSerializer {
     NSParameterAssert(responseSerializer);
 
-<<<<<<< HEAD
     super.responseSerializer = responseSerializer;
-=======
-    [super setResponseSerializer:responseSerializer];
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 }
 
 #pragma mark -
@@ -191,11 +183,7 @@
                        failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
     NSError *serializationError = nil;
-<<<<<<< HEAD
     NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[NSURL URLWithString:URLString relativeToURL:self.baseURL].absoluteString parameters:parameters constructingBodyWithBlock:block error:&serializationError];
-=======
-    NSMutableURLRequest *request = [self.requestSerializer multipartFormRequestWithMethod:@"POST" URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters constructingBodyWithBlock:block error:&serializationError];
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     if (serializationError) {
         if (failure) {
 #pragma clang diagnostic push
@@ -271,11 +259,7 @@
                                          failure:(void (^)(NSURLSessionDataTask *, NSError *))failure
 {
     NSError *serializationError = nil;
-<<<<<<< HEAD
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[NSURL URLWithString:URLString relativeToURL:self.baseURL].absoluteString parameters:parameters error:&serializationError];
-=======
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:URLString relativeToURL:self.baseURL] absoluteString] parameters:parameters error:&serializationError];
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
     if (serializationError) {
         if (failure) {
 #pragma clang diagnostic push
@@ -311,11 +295,7 @@
 #pragma mark - NSObject
 
 - (NSString *)description {
-<<<<<<< HEAD
     return [NSString stringWithFormat:@"<%@: %p, baseURL: %@, session: %@, operationQueue: %@>", NSStringFromClass([self class]), self, (self.baseURL).absoluteString, self.session, self.operationQueue];
-=======
-    return [NSString stringWithFormat:@"<%@: %p, baseURL: %@, session: %@, operationQueue: %@>", NSStringFromClass([self class]), self, [self.baseURL absoluteString], self.session, self.operationQueue];
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 }
 
 #pragma mark - NSSecureCoding

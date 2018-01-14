@@ -142,11 +142,7 @@ NS_ASSUME_NONNULL_BEGIN
  @see [SQLite File Format](http://www.sqlite.org/fileformat.html)
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, getter=getSchema, readonly, strong) FMResultSet * _Nonnull schema;
-=======
-- (FMResultSet *)getSchema;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** The schema of the database.
 

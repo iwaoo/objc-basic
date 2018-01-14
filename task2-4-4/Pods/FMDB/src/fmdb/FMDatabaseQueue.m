@@ -91,11 +91,7 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
         
         _path = FMDBReturnRetained(aPath);
         
-<<<<<<< HEAD
         _queue = dispatch_queue_create([NSString stringWithFormat:@"fmdb.%@", self].UTF8String, NULL);
-=======
-        _queue = dispatch_queue_create([[NSString stringWithFormat:@"fmdb.%@", self] UTF8String], NULL);
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
         dispatch_queue_set_specific(_queue, kDispatchQueueSpecificKey, (__bridge void *)self, NULL);
         _openFlags = openFlags;
         _vfsName = [vfsName copy];
@@ -189,23 +185,14 @@ static const void * const kDispatchQueueSpecificKey = &kDispatchQueueSpecificKey
         FMDatabase *db = [self database];
         block(db);
         
-<<<<<<< HEAD
         if (db.hasOpenResultSets) {
-=======
-        if ([db hasOpenResultSets]) {
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
             NSLog(@"Warning: there is at least one open result set around after performing [FMDatabaseQueue inDatabase:]");
             
 #if defined(DEBUG) && DEBUG
             NSSet *openSetCopy = FMDBReturnAutoreleased([[db valueForKey:@"_openResultSets"] copy]);
             for (NSValue *rsInWrappedInATastyValueMeal in openSetCopy) {
-<<<<<<< HEAD
                 FMResultSet *rs = (FMResultSet *)rsInWrappedInATastyValueMeal.pointerValue;
                 NSLog(@"query: '%@'", rs.query);
-=======
-                FMResultSet *rs = (FMResultSet *)[rsInWrappedInATastyValueMeal pointerValue];
-                NSLog(@"query: '%@'", [rs query]);
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
             }
 #endif
         }

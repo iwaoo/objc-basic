@@ -182,11 +182,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
 
  */
 
-<<<<<<< HEAD
 - (instancetype)initWithPath:(NSString * _Nullable)path NS_DESIGNATED_INITIALIZER;
-=======
-- (instancetype)initWithPath:(NSString * _Nullable)path;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Initialize a `FMDatabase` object.
  
@@ -230,11 +226,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see close
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL open;
-=======
-- (BOOL)open;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Opening a new database connection with flags and an optional virtual file system (VFS)
 
@@ -297,11 +289,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see openWithFlags:
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL close;
-=======
-- (BOOL)close;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Test to see if we have a good connection to the database.
  
@@ -693,11 +681,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see isInTransaction
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL beginTransaction;
-=======
-- (BOOL)beginTransaction;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Begin a deferred transaction
  
@@ -709,11 +693,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see isInTransaction
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL beginDeferredTransaction;
-=======
-- (BOOL)beginDeferredTransaction;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Commit a transaction
 
@@ -727,11 +707,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see isInTransaction
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL commit;
-=======
-- (BOOL)commit;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Rollback a transaction
 
@@ -745,11 +721,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  @see isInTransaction
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL rollback;
-=======
-- (BOOL)rollback;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Identify whether currently in a transaction or not
   
@@ -796,11 +768,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL interrupt;
-=======
-- (BOOL)interrupt;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 ///-------------------------
 /// @name Encryption methods
@@ -898,11 +866,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString * _Nonnull lastErrorMessage;
-=======
-- (NSString*)lastErrorMessage;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Last error code
  
@@ -916,11 +880,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) int lastErrorCode;
-=======
-- (int)lastErrorCode;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Last extended error code
  
@@ -936,11 +896,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) int lastExtendedErrorCode;
-=======
-- (int)lastExtendedErrorCode;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Had error
 
@@ -952,11 +908,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL hadError;
-=======
-- (BOOL)hadError;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Last error
 
@@ -967,11 +919,7 @@ typedef int(^FMDBExecuteStatementsCallbackBlock)(NSDictionary *resultsDictionary
  
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly, copy) NSError * _Nonnull lastError;
-=======
-- (NSError *)lastError;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 
 // description forthcoming
@@ -1302,11 +1250,7 @@ typedef NS_ENUM(int, SqliteValueType) {
  @see storeableDateFormat:
  */
 
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL hasDateFormatter;
-=======
-- (BOOL)hasDateFormatter;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /** Set to a date formatter to use string dates with sqlite instead of the default UNIX timestamps.
  

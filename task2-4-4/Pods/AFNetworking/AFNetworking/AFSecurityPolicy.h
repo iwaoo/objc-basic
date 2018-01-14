@@ -82,11 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return The default security policy.
  */
-<<<<<<< HEAD
 + (AFSecurityPolicy*)defaultPolicy;
-=======
-+ (instancetype)defaultPolicy;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 ///---------------------
 /// @name Initialization

@@ -135,11 +135,7 @@
                 if (success) {
                     success((NSHTTPURLResponse *)task.response, responseObject);
                 }
-<<<<<<< HEAD
                 [strongSelf loadData:responseObject MIMEType:MIMEType textEncodingName:textEncodingName baseURL:(task.currentRequest).URL];
-=======
-                [strongSelf loadData:responseObject MIMEType:MIMEType textEncodingName:textEncodingName baseURL:[task.currentRequest URL]];
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
                 if ([strongSelf.delegate respondsToSelector:@selector(webViewDidStartLoad:)]) {
                     [strongSelf.delegate webViewDidFinishLoad:strongSelf];
@@ -163,8 +159,4 @@
 
 @end
 
-<<<<<<< HEAD
 #endif
-=======
-#endif
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872

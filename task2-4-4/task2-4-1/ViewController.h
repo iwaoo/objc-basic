@@ -8,13 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-<<<<<<< HEAD
 
 @interface ViewController : UIViewController
 
-=======
-@interface ViewController : UIViewController
-    
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 @end
 

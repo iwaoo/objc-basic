@@ -71,11 +71,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns the shared network reachability manager.
  */
-<<<<<<< HEAD
 + (AFNetworkReachabilityManager*)sharedManager;
-=======
-+ (instancetype)sharedManager;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /**
  Creates and returns a network reachability manager with the default socket address.
@@ -132,11 +128,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Returns a localized string representation of the current network reachability status.
  */
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly, copy) NSString * _Nonnull localizedNetworkReachabilityStatusString;
-=======
-- (NSString *)localizedNetworkReachabilityStatusString;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 ///---------------------------------------------------
 /// @name Setting Network Reachability Change Callback

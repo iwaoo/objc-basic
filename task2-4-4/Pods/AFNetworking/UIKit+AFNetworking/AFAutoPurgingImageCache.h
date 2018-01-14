@@ -54,11 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return A BOOL indicating whether or not all images were removed from the cache.
  */
-<<<<<<< HEAD
 @property (NS_NONATOMIC_IOSONLY, readonly) BOOL removeAllImages;
-=======
-- (BOOL)removeAllImages;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /**
  Returns the image in the cache associated with the given identifier.
@@ -143,11 +139,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @return The new `AutoPurgingImageCache` instance.
  */
-<<<<<<< HEAD
 - (instancetype)initWithMemoryCapacity:(UInt64)memoryCapacity preferredMemoryCapacity:(UInt64)preferredMemoryCapacity NS_DESIGNATED_INITIALIZER;
-=======
-- (instancetype)initWithMemoryCapacity:(UInt64)memoryCapacity preferredMemoryCapacity:(UInt64)preferredMemoryCapacity;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 @end
 

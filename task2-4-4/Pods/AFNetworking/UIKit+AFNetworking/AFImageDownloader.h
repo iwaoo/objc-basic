@@ -101,11 +101,7 @@ typedef NS_ENUM(NSInteger, AFImageDownloadPrioritization) {
 - (instancetype)initWithSessionManager:(AFHTTPSessionManager *)sessionManager
                 downloadPrioritization:(AFImageDownloadPrioritization)downloadPrioritization
                 maximumActiveDownloads:(NSInteger)maximumActiveDownloads
-<<<<<<< HEAD
                             imageCache:(nullable id <AFImageRequestCache>)imageCache NS_DESIGNATED_INITIALIZER;
-=======
-                            imageCache:(nullable id <AFImageRequestCache>)imageCache;
->>>>>>> 6c1d934d20d1af0ad8897bf48a19ede60fce5872
 
 /**
  Creates a data task using the `sessionManager` instance for the specified URL request.
