@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface Weather : NSObject
+
+    /** イニシライザーでデータを整理 */
     @property (strong, nonatomic) NSString *text;
     @property (strong, nonatomic) NSDate *dateLabel;
     @property (strong, nonatomic) NSString *telop;

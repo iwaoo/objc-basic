@@ -9,6 +9,8 @@
 #import "Weather.h"
 
 @implementation Weather
+
+/** イニシライザーでデータを整理 */
 -(id)initWithDate:(NSDate *)date weather:(NSString *)weather icon:(NSString *)icon{
     if (self = [super init]) {
         self.dateLabel = date;

@@ -17,6 +17,8 @@
 		FA15DB4E1FF2295500F2CC88 /* task2_4_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15DB4D1FF2295500F2CC88 /* task2_4_1Tests.m */; };
 		FA15DB591FF2295500F2CC88 /* task2_4_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15DB581FF2295500F2CC88 /* task2_4_1UITests.m */; };
 		FA15DB681FF2380900F2CC88 /* Weather.m in Sources */ = {isa = PBXBuildFile; fileRef = FA15DB671FF2380900F2CC88 /* Weather.m */; };
+		FAB694AC200C40C000793F0A /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB694AB200C40C000793F0A /* WeatherTableViewCell.m */; };
+		FAB694AF200C5FF100793F0A /* AFNetworkingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB694AE200C5FF100793F0A /* AFNetworkingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		FA15DB5A1FF2295500F2CC88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA15DB661FF2380900F2CC88 /* Weather.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Weather.h; sourceTree = "<group>"; };
 		FA15DB671FF2380900F2CC88 /* Weather.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Weather.m; sourceTree = "<group>"; };
+		FAB694AA200C40C000793F0A /* WeatherTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherTableViewCell.h; sourceTree = "<group>"; };
+		FAB694AB200C40C000793F0A /* WeatherTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTableViewCell.m; sourceTree = "<group>"; };
+		FAB694AD200C5FF100793F0A /* AFNetworkingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFNetworkingViewController.h; sourceTree = "<group>"; };
+		FAB694AE200C5FF100793F0A /* AFNetworkingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,17 +134,16 @@
 		FA15DB331FF2295500F2CC88 /* task2-4-1 */ = {
 			isa = PBXGroup;
 			children = (
+				FAB694BA200C67D500793F0A /* Controllers */,
+				FAB694B9200C67AF00793F0A /* Views */,
+				FAB694B6200C673000793F0A /* Models */,
+				FAB694BB200C67F700793F0A /* Supporting Files */,
 				FA15DB341FF2295500F2CC88 /* AppDelegate.h */,
 				FA15DB351FF2295500F2CC88 /* AppDelegate.m */,
-				FA15DB371FF2295500F2CC88 /* ViewController.h */,
-				FA15DB381FF2295500F2CC88 /* ViewController.m */,
 				FA15DB3A1FF2295500F2CC88 /* Main.storyboard */,
 				FA15DB3D1FF2295500F2CC88 /* Assets.xcassets */,
 				FA15DB3F1FF2295500F2CC88 /* LaunchScreen.storyboard */,
 				FA15DB421FF2295500F2CC88 /* Info.plist */,
-				FA15DB431FF2295500F2CC88 /* main.m */,
-				FA15DB661FF2380900F2CC88 /* Weather.h */,
-				FA15DB671FF2380900F2CC88 /* Weather.m */,
 			);
 			path = "task2-4-1";
 			sourceTree = "<group>";
@@ -159,6 +164,43 @@
 				FA15DB5A1FF2295500F2CC88 /* Info.plist */,
 			);
 			path = "task2-4-1UITests";
+			sourceTree = "<group>";
+		};
+		FAB694B6200C673000793F0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA15DB661FF2380900F2CC88 /* Weather.h */,
+				FA15DB671FF2380900F2CC88 /* Weather.m */,
+				FAB694AD200C5FF100793F0A /* AFNetworkingViewController.h */,
+				FAB694AE200C5FF100793F0A /* AFNetworkingViewController.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB694B9200C67AF00793F0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAB694AA200C40C000793F0A /* WeatherTableViewCell.h */,
+				FAB694AB200C40C000793F0A /* WeatherTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAB694BA200C67D500793F0A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA15DB371FF2295500F2CC88 /* ViewController.h */,
+				FA15DB381FF2295500F2CC88 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAB694BB200C67F700793F0A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA15DB431FF2295500F2CC88 /* main.m */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,10 +390,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB694AC200C40C000793F0A /* WeatherTableViewCell.m in Sources */,
 				FA15DB681FF2380900F2CC88 /* Weather.m in Sources */,
 				FA15DB391FF2295500F2CC88 /* ViewController.m in Sources */,
 				FA15DB441FF2295500F2CC88 /* main.m in Sources */,
 				FA15DB361FF2295500F2CC88 /* AppDelegate.m in Sources */,
+				FAB694AF200C5FF100793F0A /* AFNetworkingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
