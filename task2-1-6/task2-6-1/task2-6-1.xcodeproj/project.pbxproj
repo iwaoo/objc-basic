@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAC38A62200D88C50050AF5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A61200D88C50050AF5F /* AppDelegate.m */; };
+		FAC38A65200D88C50050AF5F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A64200D88C50050AF5F /* ViewController.m */; };
+		FAC38A68200D88C50050AF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC38A66200D88C50050AF5F /* Main.storyboard */; };
+		FAC38A6B200D88C50050AF5F /* task2_6_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A69200D88C50050AF5F /* task2_6_1.xcdatamodeld */; };
+		FAC38A6D200D88C50050AF5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC38A6C200D88C50050AF5F /* Assets.xcassets */; };
+		FAC38A70200D88C50050AF5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC38A6E200D88C50050AF5F /* LaunchScreen.storyboard */; };
+		FAC38A73200D88C50050AF5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A72200D88C50050AF5F /* main.m */; };
+		FAC38A7D200D88C50050AF5F /* task2_6_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A7C200D88C50050AF5F /* task2_6_1Tests.m */; };
+		FAC38A88200D88C50050AF5F /* task2_6_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC38A87200D88C50050AF5F /* task2_6_1UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAC38A79200D88C50050AF5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC38A55200D88C50050AF5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC38A5C200D88C50050AF5F;
+			remoteInfo = "task2-6-1";
+		};
+		FAC38A84200D88C50050AF5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC38A55200D88C50050AF5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC38A5C200D88C50050AF5F;
+			remoteInfo = "task2-6-1";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAC38A5D200D88C50050AF5F /* task2-6-1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task2-6-1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC38A60200D88C50050AF5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAC38A61200D88C50050AF5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAC38A63200D88C50050AF5F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAC38A64200D88C50050AF5F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAC38A67200D88C50050AF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAC38A6A200D88C50050AF5F /* task2_6_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = task2_6_1.xcdatamodel; sourceTree = "<group>"; };
+		FAC38A6C200D88C50050AF5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAC38A6F200D88C50050AF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAC38A71200D88C50050AF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC38A72200D88C50050AF5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAC38A78200D88C50050AF5F /* task2-6-1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "task2-6-1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC38A7C200D88C50050AF5F /* task2_6_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = task2_6_1Tests.m; sourceTree = "<group>"; };
+		FAC38A7E200D88C50050AF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC38A83200D88C50050AF5F /* task2-6-1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "task2-6-1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC38A87200D88C50050AF5F /* task2_6_1UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = task2_6_1UITests.m; sourceTree = "<group>"; };
+		FAC38A89200D88C50050AF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAC38A5A200D88C50050AF5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC38A75200D88C50050AF5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC38A80200D88C50050AF5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAC38A54200D88C50050AF5F = {
+			isa = PBXGroup;
+			children = (
+				FAC38A5F200D88C50050AF5F /* task2-6-1 */,
+				FAC38A7B200D88C50050AF5F /* task2-6-1Tests */,
+				FAC38A86200D88C50050AF5F /* task2-6-1UITests */,
+				FAC38A5E200D88C50050AF5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAC38A5E200D88C50050AF5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAC38A5D200D88C50050AF5F /* task2-6-1.app */,
+				FAC38A78200D88C50050AF5F /* task2-6-1Tests.xctest */,
+				FAC38A83200D88C50050AF5F /* task2-6-1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC38A5F200D88C50050AF5F /* task2-6-1 */ = {
+			isa = PBXGroup;
+			children = (
+				FAC38A60200D88C50050AF5F /* AppDelegate.h */,
+				FAC38A61200D88C50050AF5F /* AppDelegate.m */,
+				FAC38A63200D88C50050AF5F /* ViewController.h */,
+				FAC38A64200D88C50050AF5F /* ViewController.m */,
+				FAC38A66200D88C50050AF5F /* Main.storyboard */,
+				FAC38A6C200D88C50050AF5F /* Assets.xcassets */,
+				FAC38A6E200D88C50050AF5F /* LaunchScreen.storyboard */,
+				FAC38A71200D88C50050AF5F /* Info.plist */,
+				FAC38A72200D88C50050AF5F /* main.m */,
+				FAC38A69200D88C50050AF5F /* task2_6_1.xcdatamodeld */,
+			);
+			path = "task2-6-1";
+			sourceTree = "<group>";
+		};
+		FAC38A7B200D88C50050AF5F /* task2-6-1Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FAC38A7C200D88C50050AF5F /* task2_6_1Tests.m */,
+				FAC38A7E200D88C50050AF5F /* Info.plist */,
+			);
+			path = "task2-6-1Tests";
+			sourceTree = "<group>";
+		};
+		FAC38A86200D88C50050AF5F /* task2-6-1UITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAC38A87200D88C50050AF5F /* task2_6_1UITests.m */,
+				FAC38A89200D88C50050AF5F /* Info.plist */,
+			);
+			path = "task2-6-1UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAC38A5C200D88C50050AF5F /* task2-6-1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC38A8C200D88C50050AF5F /* Build configuration list for PBXNativeTarget "task2-6-1" */;
+			buildPhases = (
+				FAC38A59200D88C50050AF5F /* Sources */,
+				FAC38A5A200D88C50050AF5F /* Frameworks */,
+				FAC38A5B200D88C50050AF5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "task2-6-1";
+			productName = "task2-6-1";
+			productReference = FAC38A5D200D88C50050AF5F /* task2-6-1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAC38A77200D88C50050AF5F /* task2-6-1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC38A8F200D88C50050AF5F /* Build configuration list for PBXNativeTarget "task2-6-1Tests" */;
+			buildPhases = (
+				FAC38A74200D88C50050AF5F /* Sources */,
+				FAC38A75200D88C50050AF5F /* Frameworks */,
+				FAC38A76200D88C50050AF5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAC38A7A200D88C50050AF5F /* PBXTargetDependency */,
+			);
+			name = "task2-6-1Tests";
+			productName = "task2-6-1Tests";
+			productReference = FAC38A78200D88C50050AF5F /* task2-6-1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAC38A82200D88C50050AF5F /* task2-6-1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC38A92200D88C50050AF5F /* Build configuration list for PBXNativeTarget "task2-6-1UITests" */;
+			buildPhases = (
+				FAC38A7F200D88C50050AF5F /* Sources */,
+				FAC38A80200D88C50050AF5F /* Frameworks */,
+				FAC38A81200D88C50050AF5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAC38A85200D88C50050AF5F /* PBXTargetDependency */,
+			);
+			name = "task2-6-1UITests";
+			productName = "task2-6-1UITests";
+			productReference = FAC38A83200D88C50050AF5F /* task2-6-1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAC38A55200D88C50050AF5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "新井岩生";
+				TargetAttributes = {
+					FAC38A5C200D88C50050AF5F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					FAC38A77200D88C50050AF5F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAC38A5C200D88C50050AF5F;
+					};
+					FAC38A82200D88C50050AF5F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FAC38A5C200D88C50050AF5F;
+					};
+				};
+			};
+			buildConfigurationList = FAC38A58200D88C50050AF5F /* Build configuration list for PBXProject "task2-6-1" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAC38A54200D88C50050AF5F;
+			productRefGroup = FAC38A5E200D88C50050AF5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAC38A5C200D88C50050AF5F /* task2-6-1 */,
+				FAC38A77200D88C50050AF5F /* task2-6-1Tests */,
+				FAC38A82200D88C50050AF5F /* task2-6-1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAC38A5B200D88C50050AF5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC38A70200D88C50050AF5F /* LaunchScreen.storyboard in Resources */,
+				FAC38A6D200D88C50050AF5F /* Assets.xcassets in Resources */,
+				FAC38A68200D88C50050AF5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC38A76200D88C50050AF5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC38A81200D88C50050AF5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAC38A59200D88C50050AF5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC38A6B200D88C50050AF5F /* task2_6_1.xcdatamodeld in Sources */,
+				FAC38A65200D88C50050AF5F /* ViewController.m in Sources */,
+				FAC38A73200D88C50050AF5F /* main.m in Sources */,
+				FAC38A62200D88C50050AF5F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC38A74200D88C50050AF5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC38A7D200D88C50050AF5F /* task2_6_1Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC38A7F200D88C50050AF5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC38A88200D88C50050AF5F /* task2_6_1UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAC38A7A200D88C50050AF5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAC38A5C200D88C50050AF5F /* task2-6-1 */;
+			targetProxy = FAC38A79200D88C50050AF5F /* PBXContainerItemProxy */;
+		};
+		FAC38A85200D88C50050AF5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAC38A5C200D88C50050AF5F /* task2-6-1 */;
+			targetProxy = FAC38A84200D88C50050AF5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAC38A66200D88C50050AF5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC38A67200D88C50050AF5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAC38A6E200D88C50050AF5F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC38A6F200D88C50050AF5F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAC38A8A200D88C50050AF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAC38A8B200D88C50050AF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAC38A8D200D88C50050AF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCJ36GJPC7;
+				INFOPLIST_FILE = "task2-6-1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.task.arai.task2-6-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAC38A8E200D88C50050AF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCJ36GJPC7;
+				INFOPLIST_FILE = "task2-6-1/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.task.arai.task2-6-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAC38A90200D88C50050AF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "task2-6-1Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.task.arai.task2-6-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/task2-6-1.app/task2-6-1";
+			};
+			name = Debug;
+		};
+		FAC38A91200D88C50050AF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "task2-6-1Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.task.arai.task2-6-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/task2-6-1.app/task2-6-1";
+			};
+			name = Release;
+		};
+		FAC38A93200D88C50050AF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "task2-6-1UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.task.arai.task2-6-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "task2-6-1";
+			};
+			name = Debug;
+		};
+		FAC38A94200D88C50050AF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "task2-6-1UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.task.arai.task2-6-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "task2-6-1";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAC38A58200D88C50050AF5F /* Build configuration list for PBXProject "task2-6-1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC38A8A200D88C50050AF5F /* Debug */,
+				FAC38A8B200D88C50050AF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC38A8C200D88C50050AF5F /* Build configuration list for PBXNativeTarget "task2-6-1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC38A8D200D88C50050AF5F /* Debug */,
+				FAC38A8E200D88C50050AF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC38A8F200D88C50050AF5F /* Build configuration list for PBXNativeTarget "task2-6-1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC38A90200D88C50050AF5F /* Debug */,
+				FAC38A91200D88C50050AF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC38A92200D88C50050AF5F /* Build configuration list for PBXNativeTarget "task2-6-1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC38A93200D88C50050AF5F /* Debug */,
+				FAC38A94200D88C50050AF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAC38A69200D88C50050AF5F /* task2_6_1.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAC38A6A200D88C50050AF5F /* task2_6_1.xcdatamodel */,
+			);
+			currentVersion = FAC38A6A200D88C50050AF5F /* task2_6_1.xcdatamodel */;
+			path = task2_6_1.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FAC38A55200D88C50050AF5F /* Project object */;
+}
