@@ -15,7 +15,6 @@
 @property FMDatabase *fm;
 @end
 
-
 static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/webservice/json/v1";
 
 
@@ -30,6 +29,32 @@ static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/w
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)getDataFromDatabase {
+    NSString *d = @"SELECT date,weather,icon FROM table_weather;";
+    [self.fm open];
+    FMResultSet *results = [self.fm executeQuery:d,@NO];
+    
+    NSMutableArray *dataList = [@[] mutableCopy];
+    
+    while( [results next] ) {
+        NSDate *date = [results dateForColumn:@"date"];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        formatter.dateFormat = @"yyyy-MM-dd";
+        NSString *weather = [results stringForColumn:@"weather"];
+        NSString *icon = [results stringForColumn:@"icon"];
+        
+        [dataList addObject:[[Weather alloc] initWithDate:date weather:weather icon:icon]];
+    }
+    
+    
+    [self.fm close];
+    
+    
+    if([self.delegate respondsToSelector:@selector(finishedCreateDataList:)]){
+        [self.delegate finishedCreateDataList:dataList];
+    }
 }
 
 #pragma mark - getWeatherInfoData
@@ -54,36 +79,13 @@ static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/w
                  [self.fm open];
                  [self.fm executeUpdate:sql,[formatter dateFromString:forecasts[@"date"]],forecasts[@"telop"],[forecasts valueForKeyPath:@"image.url"]];
                  [self.fm close];
+                 [self getDataFromDatabase];
              }
          }
          failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              NSLog(@"Error: %@", error);
          }
      ];
-    NSString *d = @"SELECT date,weather,icon FROM table_weather;";
-    [self.fm open];
-    FMResultSet *results = [self.fm executeQuery:d,@NO];
-    
-    NSMutableArray *dataList = [@[] mutableCopy];
-    
-    while( [results next] ) {
-        NSDate *date = [results dateForColumn:@"date"];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        formatter.dateFormat = @"yyyy-MM-dd";
-        NSString *weather = [results stringForColumn:@"weather"];
-        NSString *icon = [results stringForColumn:@"icon"];
-        
-        [dataList addObject:[[Weather alloc] initWithDate:date weather:weather icon:icon]];
-    }
-    
-    
-    [self.fm close];
-    
-    
-    if([self.delegate respondsToSelector:@selector(finishedCreateDataList:)]){
-        [self.delegate finishedCreateDataList:dataList];
-    }
-    
 }
 
 /*
