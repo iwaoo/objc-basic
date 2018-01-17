@@ -21,34 +21,7 @@ static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/w
 
 @implementation AFNetworkingViewController
 
-// blockでコールバック
-- (void)getWeatherInfoData:(NSDictionary<NSString *, NSString *> *)cities {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd";
-    
-    
-    NSString *sql = @"INSERT OR REPLACE INTO table_weather (date, weather, icon ) VALUES(?,?,?)";
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *filedPath = [paths.firstObject stringByAppendingPathComponent:@"weather1.db"];
-    self.fm = [[FMDatabase alloc] initWithPath:filedPath];
-    
-    [manager GET:weatherInfoUrl
-      parameters:cities
-        progress:nil
-         success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-             
-             for (NSDictionary<NSString *, NSString *> *forecasts in responseObject[@"forecasts"]) {
-
-                 [self.fm open];
-                 [self.fm executeUpdate:sql,[formatter dateFromString:forecasts[@"date"]],forecasts[@"telop"],[forecasts valueForKeyPath:@"image.url"]];
-                 [self.fm close];
-             }
-         }
-         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             NSLog(@"Error: %@", error);
-         }
-     ];
+- (void)getDataFromDatabase {
     NSString *d = @"SELECT date,weather,icon FROM table_weather;";
     [self.fm open];
     FMResultSet *results = [self.fm executeQuery:d,@NO];
@@ -61,17 +34,50 @@ static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/w
         formatter.dateFormat = @"yyyy-MM-dd";
         NSString *weather = [results stringForColumn:@"weather"];
         NSString *icon = [results stringForColumn:@"icon"];
-
+        
         [dataList addObject:[[Weather alloc] initWithDate:date weather:weather icon:icon]];
     }
-
-
+    
+    
     [self.fm close];
     
     
     if([self.delegate respondsToSelector:@selector(finishedCreateDataList:)]){
         [self.delegate finishedCreateDataList:dataList];
     }
+}
+
+// blockでコールバック
+- (void)getWeatherInfoData:(NSDictionary<NSString *, NSString *> *)cities {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd";
+    
+    
+    NSString *sql = @"INSERT OR REPLACE INTO table_weather (date, weather, icon ) VALUES(?,?,?)";
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filedPath = [paths.firstObject stringByAppendingPathComponent:@"weather1.db"];
+    self.fm = [[FMDatabase alloc] initWithPath:filedPath];
+        
+    [manager GET:weatherInfoUrl
+      parameters:cities
+        progress:nil
+         success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+             
+             for (NSDictionary<NSString *, NSString *> *forecasts in responseObject[@"forecasts"]) {
+
+                 [self.fm open];
+                 [self.fm executeUpdate:sql,[formatter dateFromString:forecasts[@"date"]],forecasts[@"telop"],[forecasts valueForKeyPath:@"image.url"]];
+                 [self.fm close];
+                 
+                 [self getDataFromDatabase];
+             }
+         }
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"Error: %@", error);
+         }
+     ];
+    
     
 }
 
