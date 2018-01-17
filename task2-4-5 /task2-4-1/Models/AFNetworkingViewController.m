@@ -31,6 +31,7 @@ static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/w
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - getWeatherInfoData
 - (void)getDataFromDatabase {
     NSString *d = @"SELECT date,weather,icon FROM table_weather;";
     [self.fm open];
@@ -57,7 +58,6 @@ static NSString *const weatherInfoUrl = @"http://weather.livedoor.com/forecast/w
     }
 }
 
-#pragma mark - getWeatherInfoData
 /** ライブドアのお天気APIを利用して、東京の天気予報を取得 */
 - (void)getWeatherInfoData:(NSDictionary<NSString *, NSString *> *)cities {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

@@ -17,7 +17,7 @@
     NSString *filedPath = [[paths firstObject] stringByAppendingPathComponent:@"weather1.db"];
     FMDatabase *fm = [[FMDatabase alloc] initWithPath:filedPath];
     
-    NSString *sql = @"CREATE TABLE IF NOT EXISTS table_weather(id integer PRIMARY KEY, date DATETIME, weather TEXT,icon TEXT);";
+    NSString *sql = @"CREATE TABLE IF NOT EXISTS table_weather(id integer PRIMARY KEY, date DATETIME UNIQUE, weather TEXT,icon TEXT);";
     
     [fm open];
     [fm executeUpdate:sql];
