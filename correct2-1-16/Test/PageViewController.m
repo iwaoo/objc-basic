@@ -10,9 +10,8 @@
 #import "ViewController.h"//
 
 @interface PageViewController ()
-{
-    NSArray *devices;
-}
+    @property NSArray *devices;
+
 @end
 
 @implementation PageViewController
@@ -20,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    devices = @[@"iPhone", @"iPad", @"iPod Touch", @"iMac", @"iWatch", @"iTv"];
+    self.devices = @[@"iPhone", @"iPad", @"iPod Touch", @"iMac", @"iWatch", @"iTv"];
     self.dataSource = self;
     
     ViewController *initiaIVC = (ViewController *)[self viewControllerAtIndex:0];
@@ -31,7 +30,7 @@
 
 - (UIViewController *) viewControllerAtIndex: (NSUInteger)index{
     ViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-    viewController.strImage = devices[index];
+    viewController.strImage = self.devices[index];
     viewController.pageIndex = index;
     
     return viewController;
@@ -57,7 +56,7 @@
         return nil;
     }
     index++;
-    if (index == devices.count) {
+    if (index == self.devices.count) {
         return nil;
     }
     return [self viewControllerAtIndex:index];
