@@ -45,7 +45,7 @@
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="dvj-rk-stg"/>
                                             <barButtonItem title="Done" width="104" id="dy9-71-cJs">
                                                 <connections>
-                                                    <action selector="hideBtn:" destination="BYZ-38-t0r" id="sCu-fo-rfo"/>
+                                                    <action selector="hideBtn:" destination="BYZ-38-t0r" id="Ug4-gS-Px3"/>
                                                 </connections>
                                             </barButtonItem>
                                         </items>

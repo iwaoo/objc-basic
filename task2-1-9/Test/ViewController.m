@@ -42,15 +42,14 @@
     self.pickerViewContainer.hidden =NO;
 
 }
-
-- (IBAction)hideBtn:(id)sender {
+- (IBAction)hideBtn:(UIBarButtonItem *)sender {
     self.pickerViewContainer.hidden =YES;
-    if ((id)sender != self.backgroundView) {// Doneボタンがクリックされた時ラベルに値を書き込む
+
         // 日付の表示形式を設定
         NSDateFormatter *df = [[NSDateFormatter alloc]init];
         df.dateFormat = @"yyyy/MM/dd HH:mm";
         
-        self.label.text = [NSString stringWithFormat:@"%@", [df stringFromDate:_datePicker.date]];
-    }
+        self.label.text = [NSString stringWithFormat:@"%@", [df stringFromDate:self.datePicker.date]];
 }
+
 @end
