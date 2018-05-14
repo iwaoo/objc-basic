@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // NSArray型
     NSArray *fruits = @[@"りんご", @"なし",@"みかん"];
+
     for(String *s in fruits)
     {
         NSLog(@"%@",s);
