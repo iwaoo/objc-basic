@@ -16,5 +16,7 @@
 @property NSString *good_point;
 
 - (NSString *) introduceMethod;
+- (void) callData;
 
 @end
+
